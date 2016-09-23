@@ -1,0 +1,14 @@
+basePath: /
+host: 21.browntech.space:8383
+info:
+  contact: {email: me@browntech.space, name: Donald Brown}
+  description: An open-source, text-based MMO focused on capturing and battling monsters!
+  title: BitMon - Bit-size Monsters!
+  x-21-category: utilities
+  x-21-github-profile-url: https://github.com/DonaldKBrown/
+  x-21-github-project-url: https://github.com/DonaldKBrown/21.co-Bitmon
+  x-21-quick-buy: wget -O bitmon-client.py http://21.browntech.space:8383/client &&
+    python3 bitmon-client.py
+  x-21-total-price: {max: 50, min: 50}
+schemes: [http]
+x-21-manifest-path: /manifest
