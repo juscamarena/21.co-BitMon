@@ -46,6 +46,11 @@ def check_if_has_monsters(user):
     cxn.close()
     return 0
 
+def check_type_advantage(type1,type2):
+    string = "{0}-{1}".format(type1,type2)
+    types = { "Nova-Earth" : 2, "Earth-Nova" : 0.5, "Nova-Wind" : 0.5, "Wind-Nova" : 2, "Earth-Wind" : 0.5, "Wind-Earth" : 2, "Nova-Nova" : 1, "Earth-Earth" : 1, "Wind-Wind" : 1 }
+    return types[string]
+
 ####Flask App Routes - The bulk of what makes it work.
 
 @app.route('/')
