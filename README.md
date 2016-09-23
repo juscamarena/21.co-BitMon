@@ -1,4 +1,4 @@
-# 21.co-BitMon
+# BitMon
 A Bitcoin-powered MMORPG in the style of a large entertainment company's wildly popular intellectual property!
 
 What is this?
@@ -58,5 +58,5 @@ Special Encounters
 Throughout the map, there will be 10 "special encounters". This will involve an NPC mimicking a player battle with the player, and the player will have to defeat between 3 and 6 high-level monsters. These special encounters will award high amounts of BitCredit and player experience, as well as earn a medal for the player. Each special encounter can only be completed once.
 How can I help?
 ==
-Anyone who would like to help is welcome to fork the main code and start adding blocks to it. I'm only one guy, and I've got a rather busy work/academic/personal life. Any help would be greatly appreciated, and might possibly be rewarded with a digital high-five (If I had money, I swear I'd give it.)
+Anyone who would like to help is welcome to fork the main code and start adding blocks to it. I'm only one guy, and I've got a rather busy work/academic/personal life. Any help would be greatly appreciated, and might possibly be rewarded with a digital high-five (If I had money, I swear I'd give it.) :)
 
