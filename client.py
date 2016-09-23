@@ -9,7 +9,7 @@ wallet = Wallet()
 requests = BitTransferRequests(wallet)
 
 srv = "http://21.browntech.space:8383/"
-
+print("Welcome to BitMon, Bit-Sized Monsters!")
 answer = int(input("Would you like to login[1] or register[2]?: "))
 ipaddr = get('https://api.ipify.org').text
 
