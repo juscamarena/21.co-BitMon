@@ -88,6 +88,10 @@ def register():
     id = int(len(cur.fetchall())) + 1
     cur.execute("INSERT INTO players VALUES({0}, '{1}', '{2}', 5000, 1, 0, 0, 0)".format(id, user, passwd)) 
     cxn.commit()
+    table_name = "{0}_inventory".format(user)
+    cur.execute("CREATE TABLE {0} ( item TEXT, desc TEXT, qty INT )".format(table_name))
+    cur.execute("INSERT INTO {0} VALUES('Basic Trap','A basic monster trap used to capture BitMon.', 10)".format(table_name))
+    cxn.commit()
     cxn.close()
     with open('log.html','a') as f:
         f.write("\n<br />{0} was registered from IP {1} at {2}.".format(user,ipaddr,curtime))
