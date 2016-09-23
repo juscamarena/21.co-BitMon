@@ -1,4 +1,4 @@
-# 21.co-BitMon
+# BitMon
 A Bitcoin-powered MMORPG in the style of a large entertainment company's wildly popular intellectual property!
 
 What is this?
