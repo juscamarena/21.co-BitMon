@@ -13,6 +13,17 @@ app = flask.Flask(__name__)
 payment = Payment(app, Wallet())
 
 ####Define some functions that may be needed in more than one place.
+def get_player_position(ckuser):
+    cxn = sqlite3.connect('bitmon.db')
+    cur = cxn.cursor()
+    position = []
+    cur.execute("SELECT xpos FROM players WHERE username='{0}'".format(ckuser))
+    position.append(cur.fetchone()[0])
+    cur.execute("SELECT ypos FROM players WHERE username='{0}'".format(ckuser))
+    position.append(cur.fetchone()[0])
+    cxn.close()
+    return position
+
 def check_if_user_exists(ckuser):
     cxn = sqlite3.connect('bitmon.db')
     cur = cxn.cursor()
@@ -75,7 +86,7 @@ def register():
         return "That username is already taken!"
     cur.execute('SELECT * FROM players')
     id = int(len(cur.fetchall())) + 1
-    cur.execute("INSERT INTO players VALUES({0}, '{1}', '{2}', 5000, 1, 0)".format(id, user, passwd)) 
+    cur.execute("INSERT INTO players VALUES({0}, '{1}', '{2}', 5000, 1, 0, 0, 0)".format(id, user, passwd)) 
     cxn.commit()
     cxn.close()
     with open('log.html','a') as f:
